@@ -1,3 +1,9 @@
+.flex {
+  display: flex;
+}
+.hidden {
+  display: none;
+}
 /*------------------------------------*\
 RESET
 \*------------------------------------*/
@@ -195,6 +201,7 @@ img {
 .top-content .first-head {
   justify-content: center;
   text-align: center;
+  padding: 10px;
 }
 .top-content .first-head h1 {
   margin-bottom: 25px;
@@ -213,6 +220,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 button i {
   margin-left: 5px;

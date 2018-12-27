@@ -1,5 +1,7 @@
 const headerSection = document.querySelectorAll('.head-section');
-// const tags = headerSection.querySelectorAll('a');
+const aboutBtn = document.querySelector('.about-btn');
+const aboutSection = document.querySelector('.about')
+
 
 
 headerSection.forEach((section)=>{
@@ -11,3 +13,14 @@ headerSection.forEach((section)=>{
         TweenMax.to (tags, 1, {opacity: 0})
       })
 })
+
+aboutBtn.addEventListener('click', ()=>{
+    aboutSection.classList.toggle('flex');
+    aboutSection.classList.toggle('hidden');
+    // if(aboutSection.classList.contains="flex"){
+    //     aboutSection.classList.remove="flex";
+    // }
+    // else{
+    //     aboutSection.classList.add="flex";
+    // }
+});
