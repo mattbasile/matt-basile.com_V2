@@ -190,6 +190,7 @@ img {
 .top-content .head-section a {
   color: black;
   text-decoration: none;
+  opacity: 0;
 }
 .top-content .first-head {
   justify-content: center;
