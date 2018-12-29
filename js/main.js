@@ -1,23 +1,31 @@
-const headerSection = document.querySelectorAll('.head-section');
+const headerContent = document.querySelectorAll('.content-head');
 const aboutBtn = document.querySelector('.about-btn');
-const aboutSection = document.querySelector('.about')
+const aboutSection = document.querySelector('.about');
+const contactSection = document.querySelector('.contact');
 
 
-
-headerSection.forEach((section)=>{
-    const tags = section.querySelectorAll('a');
+headerContent.forEach((section)=>{
+    const tags = [].slice.call(section.querySelectorAll('a'));
+    console.log(tags);
     section.addEventListener("mouseenter", ()=>{
-      TweenMax.to (tags, 1, {opacity: 1})
+      TweenMax.staggerTo (tags, 1, {opacity:"1"}, 0.2)
+      TweenMax.to(section, 1, {background: 'rgb(50, 50, 50, .3)'});
+    //   section.style.background=" rgb(50, 50, 50)";
     })
     section.addEventListener("mouseleave", ()=>{
-        TweenMax.to (tags, 1, {opacity: 0})
+        TweenMax.staggerTo (tags, 1, {opacity:"0"}, 0.2)
+        TweenMax.to(section, 1, {background: 'white'});
       })
 })
 
 aboutBtn.addEventListener('click', ()=>{
+    
     aboutSection.classList.toggle('flex');
     aboutSection.classList.toggle('hidden');
-    // if(aboutSection.classList.contains="flex"){
+    contactSection.classList.toggle('flex');
+    contactSection.classList.toggle('hidden');
+
+
     //     aboutSection.classList.remove="flex";
     // }
     // else{
